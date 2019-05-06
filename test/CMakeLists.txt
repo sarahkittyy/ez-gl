@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.13)
+project(EZ-GL)
+
+file(GLOB_RECURSE sources "${CMAKE_SOURCE_DIR}/test/*.cpp")
+foreach(source ${sources})
+	string(REGEX REPLACE ".*/(.*)\.cpp" "\\1" executable ${source})
+	add_executable(${executable} ${source})
+	target_link_libraries(${executable} ezgl)
+	target_include_directories(${executable} PUBLIC "${CMAKE_SOURCE_DIR}/include")
+endforeach()
