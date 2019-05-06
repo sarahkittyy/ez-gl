@@ -8,6 +8,8 @@
 #include <stdexcept>
 #include <string>
 
+#include "EZGL/Utility/Vector.hpp"
+
 namespace ez
 {
 
@@ -22,6 +24,14 @@ public:
 	 * @param title The window title
 	 */
 	Window(unsigned width, unsigned height, std::string title);
+
+	/**
+	 * @brief Construct the window.
+	 * 
+	 * @param dimensions The dimensions of the window.
+	 * @param title The window title.
+	 */
+	Window(Vec2<unsigned> dimensions, std::string title);
 
 	/**
 	 * @return true If the window hasn't been closed.
@@ -53,6 +63,12 @@ private:
 	 * 
 	 */
 	GLFWwindow* mWindow;
+
+	/**
+	 * @brief Initialize the GLFW window.
+	 * 
+	 */
+	void initWindow();
 
 	/**
 	 * @brief The window width

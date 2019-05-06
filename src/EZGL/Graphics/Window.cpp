@@ -9,7 +9,22 @@ Window::Window(unsigned width, unsigned height, std::string title)
 	mWidth  = width;
 	mHeight = height;
 	mTitle  = title;
+	//Init the window
+	initWindow();
+}
 
+Window::Window(Vec2<unsigned> dimensions, std::string title)
+{
+	//Initialize the settings.
+	mWidth  = dimensions.x;
+	mHeight = dimensions.y;
+	mTitle  = title;
+	//Init the window
+	initWindow();
+}
+
+void Window::initWindow()
+{
 	//Set glew to experimental
 	glewExperimental = true;
 
@@ -21,7 +36,7 @@ Window::Window(unsigned width, unsigned height, std::string title)
 	}
 
 	//Init the
-	mWindow = glfwCreateWindow(mWidth, mHeight, title.c_str(), nullptr, nullptr);
+	mWindow = glfwCreateWindow(mWidth, mHeight, mTitle.c_str(), nullptr, nullptr);
 	if (mWindow == nullptr)
 	{
 		glfwTerminate();
