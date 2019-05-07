@@ -63,9 +63,16 @@ void Window::close()
 	glfwTerminate();
 }
 
+void Window::setClearColor(Color c)
+{
+	mClearColor = c;
+}
+
 void Window::clear()
 {
 	//Clear the color and depth bits
+	Color n = mClearColor.normalize();
+	glClearColor(n.r, n.g, n.b, n.a);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glClear(GL_DEPTH_BUFFER_BIT);
 

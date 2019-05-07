@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <string>
 
+#include "EZGL/Graphics/Color.hpp"
 #include "EZGL/Utility/Vector.hpp"
 
 namespace ez
@@ -46,6 +47,13 @@ public:
 	void close();
 
 	/**
+	 * @brief Set the color to clear the window with.
+	 * 
+	 * @param c The window's background color.
+	 */
+	void setClearColor(Color c);
+
+	/**
 	 * @brief Clear the window.
 	 * 
 	 */
@@ -76,6 +84,12 @@ private:
 	 * 
 	 */
 	void initWindow();
+
+	/**
+	 * @brief The color to clear.
+	 * 
+	 */
+	Color mClearColor;
 
 	/**
 	 * @brief The window width

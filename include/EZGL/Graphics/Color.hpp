@@ -22,31 +22,38 @@ public:
 	 * @param b Blue
 	 * @param a Alpha
 	 */
-	Color(unsigned char r = 0, unsigned char g = 0, unsigned char b = 0, unsigned char a = 255);
+	Color(float r = 0, float g = 0, float b = 0, float a = 255);
+
+	/**
+	 * @brief Get a color where the r g b a components are normalized between 0 & 1
+	 * 
+	 * @return Color The normalized color. 
+	 */
+	Color normalize();
 
 	/**
 	 * @brief The red component
 	 * 
 	 */
-	unsigned char r;
+	float r;
 
 	/**
 	 * @brief The green component
 	 * 
 	 */
-	unsigned char g;
+	float g;
 
 	/**
 	 * @brief The blue component
 	 * 
 	 */
-	unsigned char b;
+	float b;
 
 	/**
 	 * @brief The alpha component
 	 * 
 	 */
-	unsigned char a;
+	float a;
 };
 
 }
