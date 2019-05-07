@@ -79,4 +79,9 @@ void Window::display()
 	glfwSwapBuffers(mWindow);
 }
 
+Vec2<size_t> Window::getSize()
+{
+	return {mWidth, mHeight};
+}
+
 }

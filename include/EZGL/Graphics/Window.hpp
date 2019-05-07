@@ -57,6 +57,13 @@ public:
 	 */
 	void display();
 
+	/**
+	 * @brief Get the size of the window.
+	 * 
+	 * @return Vec2<size_t> The size of the window
+	 */
+	Vec2<size_t> getSize();
+
 private:
 	/**
 	 * @brief The GLFW window.
