@@ -23,7 +23,6 @@ add_subdirectory("lib/glfw")
 # GLM options
 set(GLM_TEST_ENABLE_CXX_17 ON)
 set(GLM_TEST_ENABLE OFF)
-set(GLM_TEST_)
 add_subdirectory("lib/glm")
  
 find_package(OpenGL REQUIRED)
