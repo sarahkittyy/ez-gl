@@ -1,2 +1,5 @@
 #include "EZGL/Graphics/Color.hpp"
+#include "EZGL/Graphics/Shader.hpp"
+#include "EZGL/Graphics/Vertex.hpp"
+#include "EZGL/Graphics/VertexArray.hpp"
 #include "EZGL/Graphics/Window.hpp"
